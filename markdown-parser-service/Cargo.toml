@@ -1,0 +1,11 @@
+[package]
+name = "markdown-parser-service"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+pulldown-cmark = "0.9" # md to html 
+tonic = "0.7" # for grpc
+prost = "0.9" # protocol buffers
+tokio = {version ="1", features = ["full"]} 
+redis = "0.23"
