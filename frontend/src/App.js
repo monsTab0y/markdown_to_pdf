@@ -1,8 +1,13 @@
+import React from 'react';
+import Markdown2PDF from './Features/ConverterMarkdown2PDF/Views/Markdown2PDF';
+
+
 function App() {
+
   return (
-    <div className="App">
-      <h1>Markdown to PDF</h1>
-    </div>
+    <>
+    <Markdown2PDF />
+    </>
   );
 }
 
