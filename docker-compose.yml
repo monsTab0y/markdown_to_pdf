@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend  # Specify the path to the backend Dockerfile
+    ports:
+      - "8080:8080"
+    networks:
+      - md2pdf-network
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend  # Specify the path to the frontend Dockerfile
+    ports:
+      - "3000:3000"
+    networks:
+      - md2pdf-network
+
+networks:
+  md2pdf-network:
+    driver: bridge
