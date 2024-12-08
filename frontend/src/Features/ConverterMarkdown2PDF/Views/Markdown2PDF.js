@@ -62,7 +62,7 @@ function Markdown2PDF() {
     try {
       // Upload the file to the server
       setLoading(true);
-      const response = await axios.post('api/convert', formData, {
+      const response = await axios.post('http://localhost:8080/api/convert', formData, {
         responseType: 'blob', // Handle binary response
       });
       setLoading(false);
