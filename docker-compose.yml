@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  backend:
+    image: your-dockerhub-username/backend:latest  # Replace with your Docker Hub backend image
+    ports:
+      - "8080:8080"  # Exposes backend on port 8080
+    networks:
+      - md2pdf-network
+
+  frontend:
+    image: your-dockerhub-username/frontend:latest  # Replace with your Docker Hub frontend image
+    ports:
+      - "3000:3000"  # Exposes frontend on port 3000
+    networks:
+      - md2pdf-network
+
+networks:
+  md2pdf-network:
+    driver: bridge  # This is the default network driver for Docker
